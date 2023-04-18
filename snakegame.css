@@ -1,67 +1,84 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(216, 173, 204);
-    padding: 20px;
+body {
+  background-color: rgb(216, 173, 204);
+  padding: 20px;
 }
 
-.btn{
-    width: 50px;
-    height: 30px;
-    margin: 20px 0 20px 50px;
-    background-color: rgb(246, 243, 73);
+.btn {
+  width: 50px;
+  height: 30px;
+  margin: 20px 0 20px 50px;
+  background-color: rgb(246, 243, 73);
 }
 
-.text{
-    padding: 50px 0 0 50px;
-    font-size: 20px;
+.text {
+  padding: 50px 0 0 50px;
+  font-size: 20px;
 }
 
-#dice,#dice2{
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    background-color: green;
-    padding-top: 10px;
-    margin: 0 0 30px 50px;
+#dice,
+#dice2 {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  background-color: green;
+  padding-top: 10px;
+  margin: 0 0 30px 50px;
 }
 
-#dice2{
-    background-color: red;
+#dice2 {
+  background-color: red;
 }
 
 .grid-container {
-    
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
- 
-    border: 1px solid black;
-    width: 800px; 
-    height: 550px;
-    
-  }
-  
-  .grid-item {
-    background-color: white;
-    border: 1px solid rgb(195, 192, 192);
-  }
-  .grid-item:nth-child(even){
-    background-color: rgb(248, 222, 175);
-  }
-  .grid-item:nth-child(odd){
-    background-color: rgb(200, 248, 248);
-  }
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(10, 1fr);
+  /* grid-template-rows: repeat(10, 1fr); */
+  position: relative;
+  border: 1px solid black;
+  width: 800px;
+  height: 550px;
+}
 
-.container{
-    display: flex;
+.grid-container div {
+  background-color: white;
+  border: 1px solid rgb(195, 192, 192);
+}
+img {
+  position: absolute;
+}
+
+#p1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 525px;
+  left: -80px;
+  z-index: 2;
+  background-color: green;
+}
+
+#p2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 525px;
+  left: -50px;
+  z-index: 2;
+  background-color: red;
+}
+
+.container {
+  display: flex;
 }
