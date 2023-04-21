@@ -1,79 +1,78 @@
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
 }
 
 body {
-  padding: 20px;
-}
-
-.btn {
-  width: 50px;
-  height: 30px;
-  margin: 20px 0 20px 50px;
-  background-color: rgb(246, 243, 73);
-}
-
-.text {
-  padding: 50px 0 0 50px;
-  font-size: 20px;
-}
-
-#dice,
-#dice2 {
-  width: 40px;
-  height: 40px;
-  border: 1px solid black;
-  border-radius: 50px;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  background-color: green;
-  padding-top: 10px;
-  margin: 0 0 30px 50px;
-}
-
-#dice2 {
-  background-color: rgb(248, 10, 10);
-}
-
-.grid-container {
   display: grid;
-  margin: 0 auto;
+  place-items: center;
+  overflow: hidden;
+  background-color: rgb(203, 130, 203);
+}
+
+.cont {
+  display: grid;
+  width: 600px;
   grid-template-columns: repeat(10, 1fr);
+  margin: 0px 0 0px 0;
+}
+
+.cont div {
+  width: 60px;
+  height: 60px;
+  border: 0.2px solid black;
+}
+
+#p1,
+#p2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: rgb(238, 10, 10);
   position: relative;
   border: 1px solid black;
-  z-index: 99;
-  width: 800px;
-  height: 550px;
+
 }
 
- .box {
-  border: 1px solid rgb(6, 6, 6);
-  z-index: 1;
-}
-img {
-  position: absolute;
-}
-
-#p1,#p2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50px;
-  position: absolute;
-  bottom: 0;
-  left: -80px;
+#p1 {
+  position: relative;
+  top: 0px;
+  transition: all linear 0.5s;
+  left: -62px;
   z-index: 2;
-  background-color: green;
 }
 
 #p2 {
-  border-radius: 0;
-  left: -80px;
-  background-color: red;
+  z-index: 2;
+  position: relative;
+  top: -50px;
+  left: -62px;
+  transition: all linear 0.5s;
+  background-color: green;
 }
 
-.container {
-  display: flex;
+img {
+  position: relative;
+  top: -615px;
+  left: 8px;
+  margin: 0;
+  width: 615px;
+  height: 615px;
 }
+#diceCont {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 200px;
+  left: 120px;
+  z-index: 99;
+}
+#diceBtn {
+  z-index: 99;
+  padding: 5px;
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 5px;
+  width: 100px;
+}
+
